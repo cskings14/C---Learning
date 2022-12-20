@@ -4,10 +4,12 @@ using namespace std;
 
 // yay, there are Strings. Did I mention that C is annoying
 int main(){
-    string s;
-    int num = 7;
+    int s;
+    const string statement = "I like the number "; // must be double quotes to instantiate variable
     cin >> s;
-    cout << s << num;
+    // cout << cin.fail(); // prints 1 if there is a failure in the input and 0 if it is fine
+    cin.clear(); // this removes the error flag
+    cin.ignore(1000, '\n'); // ignores the error; this needs to be single quotes for a function argument
     return 0;
 
     
